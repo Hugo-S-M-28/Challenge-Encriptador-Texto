@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Encriptador de Texto</title>
+</head>
+
+<body>
+  <h1>Encriptador de Texto</h1>
+    <header>
+      <div class="logo">
+          <img src="./imagenes/logoalura.png" alt="Logo Alura">
+      </div>
+    </header>
+
+  <main>
+      <section class="seccion__texto__ingresado">
+          <textarea placeholder="Ingrese el texto aquí"></textarea>
+          <div class="span__encriptado">
+              <span>
+                  <img src="./imagenes/icons8-v1.png" alt="Alerta">
+                  Sólo letras minúsculas y sin acentos
+              </span>
+          </div>
+          <div class="error-message" style="display: none; color: red; margin-top: 10px;"></div>
+          <div class="botones__encriptado">
+              <button id="id__boton__encriptar" class="boton__encriptar">Encriptar</button>
+              <button id="id__boton__desencriptar" class="boton__desencriptar">Desencriptar</button>
+          </div>
+      </section>
+
+      <section>
+          <div id="id__seccion__resultado" class="seccion__resultado">
+              <img id="ocultar__img" src="./imagenes/muñeco.png" alt="Sin respuesta">
+              <div id="id__contenedor__span__resultado" class="contenedor__span__resultado">
+                  <p>
+                      <span class="span1__resultado">Ningún mensaje fue encontrado</span><br><br>
+                      <span class="span2__resultado">Ingresa el texto que desees encriptar o desencriptar.</span>
+                  </p>
+              </div>
+              <div class="contenedor__boton__oculto">
+                  <button id="copiar" class="boton__oculto">Copiar</button>
+              </div>
+          </div>
+      </section>
+  </main>
+
+  <footer>
+      <ul>
+          <li>Hugo Sánchez Milán</li>
+          <li>México</li>
+          <li>2024 Alura. Todos los derechos reservados</li>
+      </ul>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,323 @@
+// Variables de colores y fuentes
+$primary-color: #0A3871; // Color principal
+$secondary-color: #D8DFE8; // Color secundario
+$background-color: #F3F5FC; // Color de fondo
+$text-color: #495057; // Color del texto
+$font-family: "Inter", sans-serif; // Fuente principal
+$border-radius: 1.5rem; // Radio de bordes redondeados
+
+// Estilos globales
+body {
+  background-color: $background-color; // Fondo del cuerpo de la página
+  font-family: $font-family; // Fuente principal
+  text-align: center; // Texto centrado
+  padding: 3px; // Padding de 3px
+  display: flex; // Flexbox para el cuerpo
+  flex-direction: column; // Dirección de la flexbox en columna
+}
+
+h1 {
+  color: $primary-color; // Color principal para el título
+}
+
+header {
+  text-align: left; // Alinea el contenido del header a la izquierda
+  padding: 10px; // Añade padding alrededor del contenido del header
+
+  .logo img {
+    max-width: 100px; // Ajusta el tamaño del logo
+    height: auto; // Mantiene la proporción del logo
+  }
+}
+
+span {
+  color: $text-color; // Color del texto de los spans
+}
+
+main { 
+  flex: 1; // Permite que el main ocupe el espacio disponible, empujando el footer al fondo
+  display: flex;
+  justify-content: space-around;
+  height: 940px; // Altura específica de 940px
+  flex-wrap: wrap; // Permite que los elementos se envuelvan en pantallas más pequeñas
+
+}
+
+.seccion__texto__ingresado {
+  display: flex; // Flexbox para la sección de texto ingresado
+  flex-direction: column; // Dirección en columna
+  justify-content: space-around; // Espacio alrededor de los elementos
+  align-items: flex-start; // Alineación al inicio del eje transversal
+  height: 480px; // Altura específica de 480px
+  width: 100%; // Ajusta al ancho disponible
+  max-width: 600px; // Ancho máximo para pantallas grandes
+  padding: 15px;
+}
+
+textarea {
+  color: $primary-color; // Color del texto
+  background-color: $background-color; // Color de fondo
+  resize: none; // No redimensionable
+  overflow: auto; // Desbordamiento automático
+  border: none; // Sin borde
+  font-size: 2rem; // Tamaño de fuente de 2rem
+  outline: none; // Sin outline
+  width: 98%; // Ancho del 98%
+  height: 650px; // Altura específica de 650px
+  padding: 15px; // Padding de 15px
+}
+
+.span__encriptado {
+    display: flex;
+    margin-top: auto; // Margen superior automático para spans dentro de .span__encriptado
+    align-items: center; // Alinea imagen y texto verticalmente
+  
+    span {
+      display: flex;
+      align-items: center; // Alinea el contenido del span
+    }
+  
+    img {
+      width: 1.5em; // Ajusta el tamaño de la imagen
+      height: auto; // Mantiene la proporción de la imagen
+      margin-right: 0.5em; // Espacio entre la imagen y el texto
+    }
+}
+
+
+.icono {
+  width: 1rem; // Ancho de 1rem
+  height: 1rem; // Altura de 1rem
+}
+
+// Estilos para los botones en la sección de encriptado
+.botones__encriptado {
+  display: flex; // Flexbox para los botones de encriptado
+  justify-content: space-around; // Espacio alrededor de los elementos
+  align-items: center; // Alineación centrada en el eje transversal
+  align-content: center; // Alineación del contenido centrada
+}
+
+button {
+  background-color: $secondary-color; // Color de fondo secundario
+  text-align: center; // Texto centrado
+  border-radius: $border-radius; // Bordes redondeados
+  font-size: 1rem; // Tamaño de fuente de 1rem
+  width: 250px; // Ancho de 250px
+  height: 50px; // Altura de 50px
+  margin: 5px; // Margen de 5px
+  border: 1px solid darkblue; // Borde uniforme para todos los botones
+  transition: background-color 0.3s ease, color 0.3s ease; // Suaviza la transición del cambio de color
+  // Estilos para el estado hover (cuando el mouse está sobre el botón)
+  &:hover {
+    background-color: darken($secondary-color, 10%); // Oscurece el color de fondo en el estado hover
+  }
+
+  &.boton__encriptar {
+    background-color: $primary-color; // Color de fondo específico para el botón de encriptar
+    color: white; // Color del texto para el botón de encriptar
+
+    &:hover {
+      background-color: darken($primary-color, 10%); // Oscurece el color de fondo en el estado hover
+    }
+  }
+
+  &.boton__desencriptar {
+    color: $primary-color; // Color del texto para el botón de desencriptar
+
+    &:hover {
+      background-color: #F0F0F0; // Cambia el color de fondo en el estado hover
+      color: darkblue; // Mantiene el color del texto en el estado hover
+    }
+  }
+
+  &.boton__oculto {
+    color: $primary-color; // Color del texto para el botón oculto
+    visibility: hidden; // Oculta el botón visualmente
+    margin: 13px auto 1px; // Margen específico para el botón oculto
+
+    &:hover {
+      background-color: #F0F0F0; // Cambia el color de fondo en el estado hover
+      color: darkblue; // Cambia el color del texto en el estado hover
+    }
+  }
+}
+
+.seccion__resultado {
+  display: flex; // Flexbox para la sección de resultados
+  flex-direction: column; // Dirección en columna
+  justify-content: space-around; // Espacio alrededor de los elementos
+  align-items: center; // Alineación centrada en el eje transversal
+  border-radius: 32px; // Bordes redondeados de 32px
+  width: 400px; // Ancho de 400px
+  height: 384px; // Altura de 384px
+  padding: 2px 5px 4px; // Padding superior de 2px, lateral de 5px, e inferior de 4px
+  background-color: white; // Fondo blanco
+  word-wrap: break-word; // Ajuste de palabras en caso de desbordamiento
+  overflow-wrap: break-word; // Ajuste de palabras en caso de desbordamiento
+}
+
+.contenedor__span__resultado {
+  font-family: $font-family; // Fuente principal
+  text-align: center; // Texto centrado
+  width: 85%; // Ancho del 85%
+  margin: auto 5px; // Margen automático a los lados y de 5px a los lados
+}
+
+.span1__resultado {
+  font-size: 1.5rem; // Tamaño de fuente de 1.5rem
+  font-weight: bold; // Texto en negrita
+}
+
+.span2__resultado {
+  font-size: 1rem; // Tamaño de fuente de 1rem
+  height: 180px; // Altura de 180px
+}
+
+footer {
+  background-color: $primary-color; // Fondo del color principal
+  color: white; // Texto blanco
+  text-align: start; // Texto alineado al inicio
+  font-size: 0.6rem; // Tamaño de fuente de 0.6rem
+  width: 100vw; // Ancho completo de la ventana
+  margin-top: 20px; // Margen superior de 20px
+  clear: both; // Limpia los flotados
+}
+
+footer span {
+  color: white; // Texto blanco para los spans dentro del footer
+}
+
+li {
+  list-style: none; // Sin estilo de lista para los elementos <li>
+}
+
+/*---------------------Medias Queries-----------------------*/
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column; // Dirección en columna para pantallas pequeñas
+    justify-content: space-around; // Espacio alrededor de los elementos
+    align-items: center; // Alineación centrada
+  }
+
+  section {
+    flex: 1; // Flex 1 para que ocupe todo el espacio disponible
+    width: 95%; // Ancho del 95%
+  }
+
+  .seccion__texto__ingresado {
+    display: flex; // Flexbox para la sección de texto ingresado
+    flex-direction: column; // Dirección en columna
+    justify-content: space-around; // Espacio alrededor de los elementos
+    align-items: center; // Alineación centrada
+  }
+
+  textarea {
+    align-self: flex-start; // Alineación al inicio del eje transversal
+    height: 600px; // Altura de 600px
+    max-height: 600px; // Altura máxima de 600px
+  }
+
+  .span__encriptado {
+    align-self: flex-start; // Alineación al inicio del eje transversal
+  }
+
+  .botones__encriptado {
+    align-items: center; // Alineación centrada en el eje transversal
+    justify-content: space-between; // Espacio entre los elementos
+    align-self: center; // Alineación centrada en el eje transversal del contenedor
+  }
+
+  button {
+    background-color: transparent; // Fondo transparente
+    width: 300px; // Ancho de 300px
+    margin: 8px 12px; // Margen superior e inferior de 8px, lateral de 12px
+  }
+
+  .contenedor__span__resultado {
+    max-height: 200px; // Altura máxima de 200px
+    padding: 0px; // Sin padding
+  }
+
+  .seccion__resultado {
+    display: flex; // Flexbox para la sección de resultados
+    flex-direction: column; // Dirección en columna
+    align-items: center; // Alineación centrada en el eje transversal
+    width: auto; // Ancho automático
+    max-height: 120px; // Altura máxima de 120px
+    margin: 20px 5px 0px; // Margen superior de 20px, lateral de 5px, sin margen inferior
+    padding: 0px; // Sin padding
+    font-size: 1.5rem; // Tamaño de fuente de 1.5rem
+  }
+  .seccion__resultado__aux {
+    display: flex; // Flexbox para la sección auxiliar de resultados
+    flex-direction: column; // Dirección en columna
+    align-items: center; // Alineación centrada en el eje transversal
+    width: auto; // Ancho automático
+    max-height: 200px; // Altura máxima de 200px
+    margin: 20px 5px 0px; // Margen superior de 20px, lateral de 5px, sin margen inferior
+    padding: 0px; // Sin padding
+    font-size: 1.5rem; // Tamaño de fuente de 1.5rem
+  }
+
+  .boton__oculto {
+    width: 585px; // Ancho de 585px
+  }
+
+  #ocultar__img {
+    display: none; // Imagen oculta
+  }
+
+  footer {
+    margin-top: 0px; // Sin margen superior
+    font-size: 0.8rem; // Tamaño de fuente de 0.8rem
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    display: flex; // Flexbox para el cuerpo
+    flex-direction: column; // Dirección en columna
+  }
+
+  textarea {
+    height: 300px; // Altura de 300px
+  }
+
+  .botones__encriptado {
+    flex-direction: column; // Dirección en columna
+    justify-content: space-evenly; // Espacio uniforme entre los elementos
+  }
+
+  button {
+    width: 300px; // Ancho de 300px
+    margin: 8px auto; // Margen superior e inferior de 8px, automático a los lados
+  }
+
+  .contenedor__span__resultado {
+    width: auto; // Ancho automático
+    max-width: 300px; // Ancho máximo de 300px
+    max-height: 500px; // Altura máxima de 500px
+    padding: 15px; // Padding de 15px
+    overflow-x: hidden; // Desbordamiento horizontal oculto
+  }
+
+  .seccion__resultado {
+    max-height: 200px; // Altura máxima de 200px
+    width: 320px; // Ancho de 320px
+  }
+
+  .seccion__resultado__aux {
+    max-height: 450px; // Altura máxima de 450px
+    width: 320px; // Ancho de 320px
+  }
+
+  .contenedor__boton__oculto {
+    width: 80%; // Ancho del 80%
+  }
+
+  .boton__oculto {
+    width: 100%; // Ancho del 100%
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "one-challenge-encriptador-texto",
+  "version": "1.0.0",
+  "description": "Proyecto de encriptador de texto para el Challenge ONE.",
+  "scripts": {
+    "build-css": "sass scss/style.scss css/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "sass": "^1.77.8"
+  },
+  "author": "Hugo Sánchez",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
