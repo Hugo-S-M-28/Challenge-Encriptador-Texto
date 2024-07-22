@@ -60,7 +60,7 @@ Este proyecto es una herramienta de encriptación de texto que permite a los usu
 1. **Clona el repositorio**:
 
    ```bash
-   git clone https://github.com/tu-usuario/challenge-encriptador-texto.git
+   git clone https://github.com/Hugo-S-M-28/Challenge-Encriptador-Texto
    ```
 
 2. **Navega al directorio del proyecto**:
