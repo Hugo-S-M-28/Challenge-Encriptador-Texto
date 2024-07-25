@@ -1,8 +1,7 @@
 
 # Challenge ONE | Encriptador de Texto
 
-¡Bienvenidas y bienvenidos a nuestro primer desafío!
-
+¡Bienvenidas y bienvenidos!
 Este proyecto es una herramienta de encriptación de texto que permite a los usuarios convertir y revertir mensajes utilizando un conjunto específico de reglas. Ideal para aprender los conceptos básicos de manipulación de strings en JavaScript y estilización con SCSS.
 
 ## Reglas de Encriptación
@@ -60,7 +59,7 @@ Este proyecto es una herramienta de encriptación de texto que permite a los usu
 1. **Clona el repositorio**:
 
    ```bash
-   git clone https://github.com/Hugo-S-M-28/Challenge-Encriptador-Texto
+   git clone https://github.com/Hugo-S-M-28/challenge-encriptador-texto.git
    ```
 
 2. **Navega al directorio del proyecto**:
