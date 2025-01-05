@@ -136,7 +136,7 @@ Para utilizar estos scripts:
 
 Para preguntas o comentarios, puedes contactarme en:
 
-- linkedin: [Hugo Sánchez Milán](https://www.linkedin.com/in/hugo-s%C3%A1nchez-mil%C3%A1n-197b81278/)
+- linkedin: [Hugo Sánchez Milán](https://www.linkedin.com/in/hugo-s-197b81278/)
 - GitHub: [Hugo-S-M-28](https://github.com/Hugo-S-M-28)
 
 ¡Gracias por usar el Encriptador de Texto!
