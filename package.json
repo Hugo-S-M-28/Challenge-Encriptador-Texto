@@ -1,17 +1,32 @@
 {
-  "name": "one-challenge-encriptador-texto",
-  "version": "1.0.0",
-  "description": "Proyecto de encriptador de texto para el Challenge ONE.",
+  "name": "encriptador-app",
+  "version": "0.0.0",
   "scripts": {
-    "build-css": "sass scss/style.scss css/style.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "private": true,
+  "packageManager": "npm@11.6.2",
+  "dependencies": {
+    "@angular/common": "^21.2.0",
+    "@angular/compiler": "^21.2.0",
+    "@angular/core": "^21.2.0",
+    "@angular/forms": "^21.2.0",
+    "@angular/platform-browser": "^21.2.0",
+    "@angular/router": "^21.2.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "sass": "^1.77.8"
-  },
-  "author": "Hugo Sánchez",
-  "license": "MIT",
-  "dependencies": {
-    "bootstrap": "^5.3.3"
+    "@angular/build": "^21.2.9",
+    "@angular/cli": "^21.2.9",
+    "@angular/compiler-cli": "^21.2.0",
+    "jsdom": "^28.0.0",
+    "prettier": "^3.8.1",
+    "typescript": "~5.9.2",
+    "vitest": "^4.0.8"
   }
 }

@@ -1,0 +1,68 @@
+<div class="app-container">
+  <header class="header">
+    <div class="logo-container">
+      <img src="imagenes/logoalura.png" alt="Logo Alura" class="logo">
+    </div>
+    <h1 class="main-title">Encriptador de Texto</h1>
+  </header>
+
+  <main class="main-content">
+    <!-- Sección de Entrada -->
+    <section class="input-section">
+      <div class="textarea-wrapper">
+        <textarea 
+          [(ngModel)]="inputText" 
+          placeholder="Ingrese el texto aquí..."
+          class="main-textarea"
+          spellcheck="false">
+        </textarea>
+      </div>
+      
+      <div class="controls-wrapper">
+        <div class="info-alert">
+          <img src="imagenes/icons8-v1.png" alt="Alerta" class="info-icon">
+          <span class="info-text">Compatible con mayúsculas, acentos y signos</span>
+        </div>
+        
+        <div class="error-message-container" *ngIf="errorMessage">
+          <span class="error-text">{{ errorMessage }}</span>
+        </div>
+
+        <div class="button-group">
+          <button (click)="encriptar()" class="btn btn-primary">Encriptar</button>
+          <button (click)="desencriptar()" class="btn btn-secondary">Desencriptar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Resultado -->
+    <section class="output-section">
+      <div class="result-card" [class.has-content]="showResult">
+        <!-- Estado Vacío -->
+        <div class="empty-state" *ngIf="!showResult">
+          <img src="imagenes/muñeco.png" alt="Esperando mensaje" class="empty-img">
+          <div class="empty-text">
+            <h2 class="empty-title">Ningún mensaje fue encontrado</h2>
+            <p class="empty-description">Ingresa el texto que desees encriptar o desencriptar.</p>
+          </div>
+        </div>
+
+        <!-- Estado con Resultado -->
+        <div class="result-state" *ngIf="showResult">
+          <div class="result-text-container">
+            <p class="result-text">{{ resultText }}</p>
+          </div>
+          <button (click)="copiar()" class="btn btn-outline btn-copy">Copiar Texto</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <span class="footer-name">Hugo Sánchez Milán</span>
+      <span class="footer-sep">|</span>
+      <span class="footer-copy">2024 Alura Challenge</span>
+    </div>
+  </footer>
+</div>
